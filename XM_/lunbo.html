@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="index.css">
+    <script src="index.js"></script>
+    <title>小米商城</title>
+	<style type="text/css">
+	body{
+    margin : 0;
+    padding : 0;
+    font-family : Arial, Helvetica, sans-serif;
+}
+header a{
+    height : 120px;
+    display : block;
+    background-image: url("images/01.jpg");
+    background-position : center center;
+}
+/*导航栏*/
+nav{
+    height : 40px;
+    background-color : #333;
+}
+nav div.center{
+    width : 1226px;
+    margin : 0 auto;
+    height : 100%;
+    font-size : 12px;
+    color : #424242;
+}
+nav div.center div.left{
+    height : 100%;
+    float : left;
+}
+nav div.center div.left a,nav div.center div.left span{
+    float : left;
+    margin-right : 6px;
+    line-height : 40px;
+}
+nav div.center div.left a{
+    color : #b0b0b0;
+    text-decoration : none;
+}
+nav div.right{
+    float : right;
+}
+nav div.right div.shoppingCart{
+    float : right;
+    height : 40px;
+    width : 120px;
+    background-color : #424242;
+    box-sizing : border-box;
+    background-image : url("images/shoppingCart1.png");
+    background-position : 20px center;
+    background-repeat : no-repeat;
+    margin-left : 20px;
+}
+nav div.right div.shoppingCart a{
+    text-decoration : none;
+    color : #b0b0b0;
+    line-height : 40px;
+    padding-left : 45px;
+}
+nav div.right div.login{
+    float : right;
+}
+nav div.right div.login a,nav div.right div.login span{
+    float : right;
+    line-height : 40px;
+    margin-right : 6px;
+}
+nav div.right div.login a{
+    text-decoration : none;
+    color : #b0b0b0;
+}
+nav div.center div.left a:hover,nav div.right div.login a:hover{
+    color : #fff;
+}
+nav div.right div.shoppingCart:hover{
+    background-color : #fff;
+    background-image: url("images/shoppingCart2.png");
+}
+nav div.right div.shoppingCart a:hover{
+    color : #ff6700;
+}
+/*主体*/
+section{
+    width : 1226px;
+    margin : 0 auto;
+}
+/*logo 导航 搜索栏*/
+section div.top{
+    height : 100px;
+}
+section div.top a.logo{
+    width : 234px;
+    float : left;
+    margin : 22px 0;
+}
+section div.nav{
+    float : left;
+    width : 697px;
+}
+section div.nav a{
+    text-decoration : none;
+    color : #333;
+    line-height : 100px;
+    padding-right : 15px;
+    font-size : 16px;
+}
+section div.nav a:hover{
+    color : #ff6700;
+}
+section div.search{
+    float : right;
+    margin : 25px 0;
+}
+section div.search form input{
+    width : 223px;
+    height : 48px;
+    padding : 0;
+    float : right;
+    border : 1px solid #b0b0b0;
+    font-size : 16px;
+}
+section div.search form input[type="submit"]{
+    width : 48px;
+    padding : 0;
+    margin : 0;
+    box-sizing : content-box;
+    border-left : 0px solid #b0b0b0;
+    background-color : #fff;
+}
+section div.search form input[type="submit"]:hover{
+    background-color : #ff6700;
+    border-color : #ff6700;
+    color : #fff;
+}
+/* 主体 左栏*/
+section div.main{
+    position: relative;
+    width : 100%;
+    float : left;
+}
+section div.main div.leftBar{
+    position : absolute;
+    left : 0;
+    top : 0;
+    width : 234px;
+    height : 420px;
+    padding : 20px 0;
+    background-color : rgba(0, 0, 0, 0.6);
+    float : left;
+}
+section div.main div.leftBar a{
+    float : left;
+    height : 42px;
+    width : 100%;
+    text-decoration : none;
+    color : #fff;
+    line-height : 42px;
+    padding : 0 30px;
+    font-size : 14px;
+    box-sizing : border-box;
+}
+section div.main div.leftBar a span{
+    font-size : 16px;
+    font-weight : bold;
+    float : right;
+}
+section div.main div.leftBar a:hover{
+    background-color : #ff6700;
+}
+/*轮播图*/
+section div.run{
+    position: relative;
+    width : 100%;
+    height : 460px;
+    background-color : pink;
+}
+section div.run img{
+    position : absolute;
+    left : 0;
+    right : 0;
+    width : 100%;
+    height : 100%;
+}
+section div.run a.runimg{
+    opacity : 0;
+    transition-duration: 1s;
+}
+section div.run div.left,section div.run div.right{
+    width : 41px;
+    height : 69px;
+    position : absolute;
+    left : 234px;
+    top : 50%;
+    margin-top : -35px;
+    background-color : rgba(0, 0, 0, 0);
+    text-align : center;
+    line-height : 69px;
+    font-size : 50px;
+    color : #eee;
+    border-radius : 0 5px 5px 0;
+    cursor : pointer;
+}
+section div.run div.right{
+    left : 100%;
+    margin-left : -41px;
+    border-radius : 5px 0 0 5px;
+}
+section div.run div.left:hover,section div.run div.right:hover{
+    background-color : rgba(0, 0, 0, 0.5);
+}
+section div.run div.index{
+    position : absolute;
+    width : 120px;
+    height : 10px;
+    right : 30px;
+    bottom : 20px;
+}
+section div.run div.index a{
+    float : left;
+    width : 6px;
+    height : 6px;
+    border : 2px solid rgba(0, 0, 0, 0.4);
+    background-color : rgba(0, 0, 0, 0.4);
+    margin : 0 6px;
+}
+section div.run div.index a:hover{
+    background-color : rgba(255, 255, 255, 0.4)!important;
+}
+/*主题方块链接*/
+section div.theme{
+    float : left;
+    height : 170px;
+    width : 100%;
+    margin-top : 14px;
+}
+section div.theme div.menu{
+    width : 234px;
+    height : 100%;
+    float : left;
+    margin-right : 2px;
+}
+section div.theme div.menu ul{
+    margin : 0;
+    padding : 0;
+    list-style : none;
+}
+section div.theme div.menu ul a{
+    color : rgba(255, 255, 255, 0.6);
+    text-decoration : none;
+    background-color : #5f5750;
+    float : left;
+    width : 78px;
+    height : 85px;
+    box-sizing : border-box;
+    border : 1px solid rgba(255, 255, 255, 0.2);
+    border-width : 0 1px 1px 0;
+    font-size : 40px;
+    text-align : center;
+    line-height : 35px;
+    padding-top : 12px;
+}
+section div.theme div.menu ul a:hover{
+    color : rgba(255, 255, 255, 1);
+}
+section div.theme div.menu ul a p{
+    margin : 0;
+    font-size : 14px;
+    line-height : 14px;
+}
+
+section div.theme div.product a{
+    float : left;
+    margin-left : 14px;
+}
+section div.theme div.product img{
+    width : 316px;
+    height : 170px;
+    vertical-align : bottom;   
+}
+
+	
+</style>
+
+</head>
+<body>
+    <!--头部-->
+    <header>
+        <a href="#"></a>
+    </header>
+    <!--导航栏-->
+    <nav>
+        <div class="center">
+            <div class="left">
+                <a href="#">小米商城</a><span>|</span>
+                <a href="#">MIUI</a><span>|</span>
+                <a href="#">IOT</a><span>|</span>
+                <a href="#">云服务</a><span>|</span>
+                <a href="#">金融</a><span>|</span>
+                <a href="#">有品</a><span>|</span>
+                <a href="#">小爱开放平台</a><span>|</span>
+                <a href="#">政企服务</a>
+            </div>
+            <div class="right">
+                <div class="shoppingCart">
+                    <a href="#">购物车(0)</a>
+                </div>
+                <div class="login">
+                    <a href="#">消息通知</a><span>|</span>
+                    <a href="#">注册</a><span>|</span>
+                    <a href="#">登录</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!--主体内容-->
+    <section>
+        <!--logo 导航 搜索栏-->
+        <div class="top">
+            <a class="logo" href="#"><img src="images/logo.png" alt="logo"></a>
+            <div class="nav">
+                <a href="#">小米手机</a>
+                <a href="#">红米</a>
+                <a href="#">电视</a>
+                <a href="#">笔记本</a>
+                <a href="#">盒子</a>
+                <a href="#">新品</a>
+                <a href="#">路由器</a>
+                <a href="#">智能硬件</a>
+                <a href="#">服务</a>
+                <a href="#">社区</a>
+            </div>
+            <div class="search">
+                <form action="#">
+                    <input type="submit" value="搜">
+                    <input type="text">
+                </form>
+            </div>    
+        </div>
+        <!--边栏 轮播图-->
+        <div class="main">
+            <!--轮播图-->
+            <div class="run">
+                <a class="runimg" style="opacity: 1;" href="#"><img src="p1.jpg" alt=""></a>
+                <a class="runimg" href="#"><img src="p2.jpg" alt=""></a>
+                <a class="runimg" href="#"><img src="p3.jpg" alt=""></a>
+                <a class="runimg" href="#"><img src="p4.jpg" alt=""></a>
+                <a class="runimg" href="#"><img src="p5.jpg" alt=""></a>
+                <div class="left"><</div>
+                <div class="right">></div>
+                <div class="index">
+                    <a href="#" style="background-color: rgba(255, 255, 255, 0.4);"></a>
+                    <a href="#"></a>
+                    <a href="#"></a>
+                    <a href="#"></a>
+                    <a href="#"></a>
+                </div>
+            </div>
+            <!--边栏-->
+            <div class="leftBar">
+                <a href="#">手机 电话卡<span>></span></a>
+                <a href="#">电视 盒子<span>></span></a>
+                <a href="#">笔记本 平板<span>></span></a>
+                <a href="#">智能 家电<span>></span></a>
+                <a href="#">健康 家居<span>></span></a>
+                <a href="#">出行 儿童<span>></span></a>
+                <a href="#">路由器 手机配件<span>></span></a>
+                <a href="#">移动电源 插线板<span>></span></a>
+                <a href="#">耳机 音响<span>></span></a>
+                <a href="#">生活 米兔<span>></span></a>
+            </div>  
+        </div>
+        <!--主题方块链接-->
+        <div class="theme">
+            <div class="menu">
+                <ul>
+                    <li><a href="#">¤<p>选购手机</p></a></li>
+                    <li><a href="#">¤<p>选购手机</p></a></li>
+                    <li><a href="#">¤<p>选购手机</p></a></li>
+                    <li><a href="#">¤<p>选购手机</p></a></li>
+                    <li><a href="#">¤<p>选购手机</p></a></li>
+                    <li><a href="#">¤<p>选购手机</p></a></li>
+                </ul>
+            </div>
+            <div class="product">
+                <a href="#"><img src="images/z1.jpg" alt=""></a>
+                <a href="#"><img src="images/z2.jpg" alt=""></a>
+                <a href="#"><img src="images/z3.jpg" alt=""></a>
+            </div>
+        </div>
+    </section>
+    <footer></footer>
+    <script>
+        var div = document.getElementsByClassName('run')[0];
+        var imgs = div.getElementsByClassName('runimg');//图片
+        var index = div.getElementsByClassName('index')[0];
+        var indexs = index.getElementsByTagName('a');//索引
+        var leftmove = div.getElementsByClassName('left')[0];//左切换
+        var rightmove = div.getElementsByClassName('right')[0];//右切换
+
+        for(var i = 0 ; i < indexs.length; i ++){
+            indexs[i].s = i; 
+        }
+        
+        var count = 0;
+        //轮播
+        var run = setInterval(start,1500); 
+        
+        //鼠标移入移除事件绑定
+        div.addEventListener("mouseover",function(){
+            clearInterval(run);
+        },false);
+
+        div.addEventListener("mouseout",function(){
+            clearInterval(run);
+            run = setInterval(start,1500);
+        },false);
+        
+        //上一张、下一张按钮事件绑定
+        leftmove.addEventListener("click",function(){
+            imgs[count].style.opacity= 0;
+            indexs[count].style.backgroundColor = "rgba(0,0,0,0.4)";
+            count --;
+            if(count == -1){
+                count = 4;
+            }
+            imgs[count].style.opacity = 1;
+            indexs[count].style.backgroundColor = "rgba(255,255,255,0.4)";
+        },false);
+
+        rightmove.addEventListener("click",start,false);
+
+        //点击索引小圆点事件绑定
+        index.addEventListener('click',function(e){
+            var event = e || window.event;
+            var target = event.target || event.srcElement;
+            indexs[count].style.backgroundColor = "rgba(0,0,0,0.4)";
+            imgs[count].style.opacity = 0;
+            count = target.s;
+            imgs[count].style.opacity = 1;
+            indexs[count].style.backgroundColor = "rgba(255,255,255,0.4)";
+        },false);
+
+        //轮播函数
+        function start (){
+            imgs[count].style.opacity= 0;
+            indexs[count].style.backgroundColor = "rgba(0,0,0,0.4)";
+            count ++;
+            if(count == 5){
+                count = 0;
+            }
+            imgs[count].style.opacity = 1;
+            indexs[count].style.backgroundColor = "rgba(255,255,255,0.4)";
+        }
+
+    </script>
+</body>
+</html>

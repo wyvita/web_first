@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<style type="text/css">
+		.box{
+					width: 1500px;
+					height: 500px;
+					overflow: hidden;
+					border: solid black;
+					
+					
+				}
+				.lb_div{
+					width: 60100px;
+					height: 500px;
+					display: inline-block;
+					margin-left: 0px;
+					animation-name: lb;
+					animation-duration: 20s;
+					animation-iteration-count:100;
+				}
+				.lb_div img{
+					width: 1500px;
+					height: 500px;
+				}
+				@keyframes lb{
+					0%{
+						margin-left: 0px;
+					}
+					25%{
+						margin-left:-1500px;
+						
+					}
+					50%{
+						margin-left:-3000px;
+					}
+					75%{
+						margin-left:-4500px;
+					}
+					100%{
+						margin-left:-6000px ;
+					}
+				}
+			</style>
+		</head>
+		<body>
+			<div class="box">
+				<div class="lb_div">
+					<img src="bg2.jpg" />
+					<img src="bg1.jpg" />
+					<img src="bg3.jpg" />
+					<img src="bg4.jpg" />
+					<img src="bg5.jpg" />
+				</div>
+			</div>
+	</body>
+</html>
